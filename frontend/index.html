@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Exam Answer Explainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>AI Exam Answer Explainer</h1>
+  <p class="subtitle">
+    AI-powered evaluation based on marks and examiner expectations
+  </p>
+
+  <label>Question</label>
+  <textarea id="question"></textarea>
+
+  <label>Student Answer</label>
+  <textarea id="answer"></textarea>
+
+  <label>Marks for this Question</label>
+  <input type="number" id="marks" min="1" max="20" />
+
+  <button onclick="analyzeAnswer()">Analyze Answer</button>
+
+  <div id="loading" class="loading hidden">AI is evaluating...</div>
+
+  <div id="result" class="result-grid hidden">
+
+    <div class="original-answer-card">
+      <h3>Student Answer</h3>
+      <p id="studentAnswer"></p>
+    </div>
+
+    <div class="feedback-card">
+      <h3>AI Feedback</h3>
+
+      <p><strong>Score:</strong> <span id="score"></span></p>
+      <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+
+      <h4>Mistakes</h4>
+      <ul id="mistakes"></ul>
+
+      <h4>Explanation</h4>
+      <p id="explanation"></p>
+
+      <h4>How to Improve</h4>
+      <p id="improve"></p>
+
+      <h4>Correct Answer (Expected)</h4>
+      <ul id="correctAnswer"></ul>
+    </div>
+
+  </div>
+
+  <p class="amd-tag">
+    Explainable AI engine simulating human examiners
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
